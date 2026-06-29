@@ -43,33 +43,6 @@ esp32-radar/
 
 ---
 
-## ⚙️ Persyaratan
-
-### Server
-- PHP **7.4+** dengan ekstensi `curl` aktif
-- Web server: Apache / Nginx / PHP built-in server
-- Browser modern (Chrome, Firefox, Edge, Safari)
-
-### Hardware
-| Komponen | Spesifikasi |
-|---|---|
-| Mikrokontroler | ESP32 DevKit (atau kompatibel) |
-| Sensor jarak | HC-SR04 Ultrasonik |
-| Aktuator | Servo SG90 (0–180°) |
-| Koneksi | WiFi 802.11 b/g/n |
-| Power | 5V USB atau 3.7V LiPo |
-
-### Koneksi Pin ESP32
-| Komponen | Pin ESP32 |
-|---|---|
-| Servo (Signal) | GPIO 13 |
-| HC-SR04 TRIG | GPIO 12 |
-| HC-SR04 ECHO | GPIO 14 |
-| HC-SR04 VCC | 5V |
-| HC-SR04 GND | GND |
-
----
-
 ## 🚀 Instalasi & Menjalankan
 
 ### 1. Clone / Download Proyek
@@ -184,7 +157,7 @@ Semua nilai threshold dapat diubah di halaman **Pengaturan → Batas Deteksi**.
 
 ```js
 const State = {
-  espIP:        '192.168.1.100',  // IP default ESP32
+  espIP:        '-',              // IP default ESP32
   espPort:      80,               // Port HTTP
   pollInterval: 200,              // Interval fetch data (ms)
   dangerDist:   20,               // Batas bahaya (cm)
